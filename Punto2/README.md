@@ -1,18 +1,17 @@
-# Servicio PXE (Preboot eXecution Environment)
+# **PXE Server (Preboot eXecution Environment)**
 
 ## DCHP (Dynamic Host Configuration Protocol)
 
-El servicio DHCP sirve para asignar la ip a un número de hosts de forma automática ahorrando el trabajo manual de asignar una ip a cada uno de los computadores en una red. Esto resulta útil para el PXE a la hora de asignar la ip al cliente que use el servicio. Pero para conseguirlo es necesaro configurar la subred, la mascara, el rango de ips utilizables, la ip de boradcast (ultima ip de la red) y la ip del servidor. Para el servicio de PXE se agrega el archivo de instalación dentro del archivo de configuración de DHCP y se activan opciones de boot dentro del mismo. Todo esto se puede ver en el archivo de configuración anexo.
+The DHCP service is used to assign the IP to a number of hosts automatically, saving the manual work of assigning an IP to each of the computers on a network. This is useful for PXE when assigning the Ip to the client that uses the service. But to achieve this it is necessary to configure the subnet, the mask, the range of usable Ips, the broadcast Ip (last Ip of the network), and the server ip. For the PXE service, the installation file is added to the DHCP configuration file and boot options are activated within it. All this can be seen in the attached configuration file.
 
 ## TFTP (Trivial File Transfer Protocol)
 
-El servicio TFTP suele usarse en redes de computadores y permite una transmisión de archivos como lo es el servicio FTP, pero de forma muy sencilla y básica, incluso a diferencia del FTP, TFTP usa el puerto 69 y el protocolo de transporte UDP en lugar de TCP. Para activarlo se configura la opción de disable a "no" en el archivo de configuración de TFTP.
+The TFTP service is usually used in computer networks and allows file transmission like the FTP service, but in a very simple and basic way, even unlike FTP, TFTP uses port 69 and the UDP transport protocol instead of TCP. To enable it, set the disable option to "no" in the TFTP configuration file.
 
 ## KICKSTART
 
-Para que toda la instalación se realice automáticamente es necesario configurar un archivo de inicio rápido indicando todas las configuraciones iniciales que va a ejecutar el servicio de PXE, por ejemplo: la zona horaria, el idioma, los paquetes de descarga, etc. En este archivo se configura el acceso al TFTP indicando la ip del servidor y la ruta de acceso que se ha configurado con una contraseña encriptada que se ha obtenido durante el proceso de configuración del servicio PXE.
+In order for the entire installation to be carried out automatically, it is necessary to configure a quick start file indicating all the initial configurations that the PXE service is going to execute, for example, the time zone, the language, the download packages, etc. In this file, access to the TFTP is configured, indicating the IP of the server and the path that has been configured with an encrypted password that has been obtained during the configuration process of the PXE service.
 
 ## PXE MENU FILE
 
-Es el menu de configuración inicial para el boot del servicio. Este menu y sus caracteristicas se deben indicar en el archivo de configuración determinado de inicio.
-  
+It is the initial configuration menu for starting the service. This menu and its characteristics must be indicated in the file of certain startup configurations.  

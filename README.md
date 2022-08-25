@@ -1,3 +1,2 @@
-# PARCIAL1 TELECO3
-
-Toda la información correspondiente a cada punto realizado se encuentra al interior de su carpeta.
+# Project
+Implementation of PXE server and HTTP tunnel. Detailed information is found inside every folder

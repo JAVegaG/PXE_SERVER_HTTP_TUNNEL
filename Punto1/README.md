@@ -1,12 +1,12 @@
-# Tunel del servicio HTTP
+# **HTTP service tunnel**
 
 ## PORT FORWARDING
 
-Permite la conexión entre los puertos de la maquina virtual (servidor) y el host (maquina real) lo que hace posible acceder al servidor HTTP usando localhost e indicando el puerto de acceso (que a su vez está conectado al puerto de HTTP del servidor), para esto se configura el vagrantfile de la maquina y se indica que puerto se desea conectar entre host y maquina virtual por ejemplo el puerto 80 del servidor y el 8080 del host (esto se puede ver en el Vagrantgile anexado).
+It allows the connection between the ports of the virtual machine (server) and the host (real machine) which makes it possible to access the HTTP server using localhost and to indicate the access port (which in turn is connected to the HTTP port of the server) For this, the vagrantfile of the machine is configured. Also, the port to be connected between the host and virtual machine is designated, for instance, port 80 of the server and 8080 of the host (this can be seen in the attached Vagrantgile).
 
-## TUNEL PARA ACCESO WEB REMOTO
+## TUNNEL FOR REMOTE WEB ACCESS
 
-Permite el acceso al servicio HTTP desde cualquier lugar de la web a través de una URL temporal usando el vagrant share que comparte el puerto del servidor (en la practica se usaba el puerto que en el item anterior correspondia al host (8080)) y el driver ngrok que crea el tunel y su correspondiente URL, la sintaxis del codigo fue:
+It allows access to the HTTP service from anywhere on the web through a temporary URL using the vagrant share that shares the server port (in practice the port that in the previous item corresponds to the host (8080) was used) and the ngrok driver that creates the tunnel and its corresponding URL, the code syntax was:
 
-vagrant share servidor --http 8080 --driver ngrok
+>vagabond share server --http 8080 --driver ngrok
 
